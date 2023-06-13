@@ -1,6 +1,6 @@
 const config = {
   db: {
-    host: process.env.MYSQLHOST,
+    host: $`{{MySQL.MYSQLHOST}}`    ,
     database: process.env.MYSQLDATABASE,
     user: process.env.MYSQLUSER,
     password: process.env.MYSQLPASSWORD,
