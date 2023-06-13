@@ -42,5 +42,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(config.port, () => {
-  console.log(`Example app listening at http://localhost:${config.port}`);
+  console.log(`Example app listening at ${config.MYSQLHOST}:${config.port}`);
 });
