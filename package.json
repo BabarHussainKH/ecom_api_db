@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +13,6 @@
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.22"
+    "mysql": "^2.18.1"
   }
 }
