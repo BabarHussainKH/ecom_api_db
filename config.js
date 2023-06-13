@@ -1,11 +1,11 @@
 const config = {
   db: {
-    host: '${process.env.MYSQLHOST}',
-    database: '${process.env.MYSQLDATABASE}',
-    user: '${process.env.MYSQLUSER}',
-    password: '${process.env.MYSQLPASSWORD}'  
+    host: `${process.env.MYSQLHOST}`,
+    database: `${process.env.MYSQLDATABASE}`,
+    user: `${process.env.MYSQLUSER}`,
+    password: `${process.env.MYSQLPASSWORD}`  
   },
-  port:'${process.env.MYSQLPORT}'
+  port:`${process.env.MYSQLPORT}`
 }
 
 
