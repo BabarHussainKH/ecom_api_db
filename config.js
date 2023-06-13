@@ -5,7 +5,7 @@ const config = {
     user: process.env.MYSQLUSER,
     password: process.env.MYSQLPASSWORD,
   },
-  port: process.env.MYSQLPORT}`,
+  port: process.env.MYSQLPORT,
 }
 
 module.exports = config;
