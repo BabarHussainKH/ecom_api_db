@@ -1,12 +1,12 @@
 const config = {
   db: {
-    host: `${process.env.MYSQLHOST}` || "localhost",
-    database: `${process.env.MYSQLDATABASE}` || "ecom_api_db",
-    user: `${process.env.MYSQLUSER}` || "root",
-    password: `${process.env.MYSQLPASSWORD}` || "root",
+    host: '${process.env.MYSQLHOST}',
+    database: '${process.env.MYSQLDATABASE}',
+    user: '${process.env.MYSQLUSER}',
+    password: '${process.env.MYSQLPASSWORD}'  
   },
-  port:`${process.env.MYSQLPORT}` || 30004
-};
+  port:'${process.env.MYSQLPORT}'
+}
 
 
 module.exports = config
