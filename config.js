@@ -1,13 +1,12 @@
-require('dotenv').config();
-
 const config = {
   db: {
-    host: "containers-us-west-27.railway.app",
-    database: "railway",
-    user: "root",
-    password: "NCsQFY7ofuywXkO2wYpa",
+    host: process.env.MYSQLHOST || "localhost",
+    database: process.env.MYSQLDATABASE || "ecom_api_db",
+    user: process.env.MYSQLUSER || "root",
+    password: process.env.MYSQLPASSWORD || "root",
   },
-  port: 6104,
-}
+  port:process.env.MYSQLPORT || 30004
+};
 
-module.exports = config;
+
+module.exports = config
