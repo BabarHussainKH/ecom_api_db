@@ -1,11 +1,11 @@
 const config = {
   db: {
-    host: `{{MySQL.MYSQLHOST}}`    ,
-    database: process.env.MYSQLDATABASE,
-    user: process.env.MYSQLUSER,
-    password: process.env.MYSQLPASSWORD,
+    host: `${MYSQLHOST}`    ,
+    database: `${MYSQLDATABASE}`,
+    user: `${MYSQLUSER}`,
+    password: `${MYSQLPASSWORD}`,
   },
-  port: process.env.MYSQLPORT,
+  port: `${MYSQLPORT}`,
 };
 
 module.exports = config;
