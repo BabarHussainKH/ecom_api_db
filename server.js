@@ -7,6 +7,10 @@ const server = {
     if (!connection) connection = mysql.createConnection(config.db);
     return connection;
   },
+  getPool: () => {
+    if (!connection) connection = mysql.createPool(config.db);
+    return connection;
+  },
 };
 
 module.exports = server;

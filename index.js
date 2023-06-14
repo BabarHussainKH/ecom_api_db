@@ -17,12 +17,12 @@ app.use("/ecomapi/products", productRoute);
 app.use("/ecomapi/sliders", slidersRoute);
 app.use("/ecomapi/orders", ordersRoute);
 
-const database = server.getConnection();
+const database = server.getPool();
 
-database.connect(function (err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
+// pool.c(function (err) {
+//   if (err) throw err;
+//   console.log("Connected!");
+// });
 
 // app.get("/ecomapi/", (req, res) => {
 //   database.query(
@@ -42,5 +42,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(config.port, () => {
-  console.log(`Example app listening at ${config.MYSQLHOST}:${config.port}`);
+  console.log(`Example app listening at ${config.db.host}:${config.port}`);
 });

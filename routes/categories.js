@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const server = require("../server");
-const database = server.getConnection();
+const database = server.getPool();
 
 router.get("/", (req, res) => {
   let resposne = {
