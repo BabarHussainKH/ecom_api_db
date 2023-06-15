@@ -1,5 +1,6 @@
 const config = require("./config");
-const mysql = require("mysql2");
+const mysql = require("mysql2/promise");
+// const mysql = require("mysql");
 let connection;
 
 const server = {
@@ -7,10 +8,10 @@ const server = {
     if (!connection) connection = mysql.createConnection(config.db);
     return connection;
   },
+
   getPool: () => {
-    if (!connection) connection = mysql.createPool(config.db);
-    return connection;
+    return mysql.createPool(config.db);
   },
-};
+}
 
 module.exports = server;
