@@ -13,14 +13,13 @@ router.get("/id", (req, res) => {
   };
 
   connection.query("select * from orders where id = " + id, (error, result) => {
+    
     if (error) {
       resposne.status = false;
       resposne.message = error;
-      res.send(resposne);
-      return;
+    }else{
+      resposne.data = result;
     }
-
-    resposne.data = result;
     res.send(resposne);
   });
 });
@@ -100,17 +99,21 @@ router.get("/:id", async (req, res) => {
     status: true,
   };
 
-  connection.query(`select * from orders where id = ${id}`, (err, result) => {
+  let query  ="select * from order_items where order_id =(?)";
+  console.log(query);
+
+  connection.query(query, [id], (err, result) => {
     if (err) {
       resposne.status = false;
-      resposne.message = error;
+      resposne.message = err;
     } else {
       resposne.data = result;
       console.log("1 record inserted in order_items d ");
     }
+    
+  res.send(resposne);
   });
 
-  res.send(resposne);
 });
 
 router.patch("/:id", (req, res) => {
